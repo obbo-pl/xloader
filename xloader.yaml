@@ -1,0 +1,23 @@
+log:
+    # level: Control the severity of messages logged to the error_log.
+    # Available values: CRITICAL, ERROR, WARNING, INFO, DEBUG
+    level: INFO
+    #level: DEBUG
+
+i2c:
+    #bus: 1
+    bus: '/dev/i2c-1'
+    # 7 bit address (will be left shifted to add the read write bit)
+    address: 0x2a
+
+spi: 
+    bus: 0
+    device: 0
+    max_speed_hz: 10000000
+    mode: 0b00
+    lsbfirst: false
+
+arg:
+    read_signature: true
+    get_sw_revision: true
+    
