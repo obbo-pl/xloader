@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xloader>
+    <devices>
+        <device name="ATmega128">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9702</signature>
+        </device>
+        <device name="ATmega1280">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9703</signature>
+        </device>
+        <device name="ATmega1281">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9704</signature>
+        </device>
+        <device name="ATmega1284">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9706</signature>
+        </device>
+        <device name="ATmega1284P">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9705</signature>
+        </device>
+        <device name="ATmega1284RFR2">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1ea703</signature>
+        </device>
+        <device name="ATmega128A">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9702</signature>
+        </device>
+        <device name="ATmega128RFA1">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1ea701</signature>
+        </device>
+        <device name="ATmega128RFR2">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1ea702</signature>
+        </device>
+        <device name="ATmega16">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9403</signature>
+        </device>
+        <device name="ATmega162">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9404</signature>
+        </device>
+        <device name="ATmega164A">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e940f</signature>
+        </device>
+        <device name="ATmega164P">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e940a</signature>
+        </device>
+        <device name="ATmega164PA">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e940a</signature>
+        </device>
+        <device name="ATmega165A">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9410</signature>
+        </device>
+        <device name="ATmega165P">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9407</signature>
+        </device>
+        <device name="ATmega165PA">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9407</signature>
+        </device>
+        <device name="ATmega168">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9406</signature>
+        </device>
+        <device name="ATmega168A">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9406</signature>
+        </device>
+        <device name="ATmega168P">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e940b</signature>
+        </device>
+        <device name="ATmega168PA">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e940b</signature>
+        </device>
+        <device name="ATmega168PB">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9415</signature>
+        </device>
+        <device name="ATmega169A">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9411</signature>
+        </device>
+        <device name="ATmega169P">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9405</signature>
+        </device>
+        <device name="ATmega169PA">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9405</signature>
+        </device>
+        <device name="ATmega16A">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9403</signature>
+        </device>
+        <device name="ATmega16HVA">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0100</eeprom_size>
+            <fuse_bits>False</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e940c</signature>
+        </device>
+        <device name="ATmega16HVB">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e940d</signature>
+        </device>
+        <device name="ATmega16HVBrevB">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e940d</signature>
+        </device>
+        <device name="ATmega16M1">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9484</signature>
+        </device>
+        <device name="ATmega16U2">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9489</signature>
+        </device>
+        <device name="ATmega16U4">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9488</signature>
+        </device>
+        <device name="ATmega2560">
+            <flash_size>0x40000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9801</signature>
+        </device>
+        <device name="ATmega2561">
+            <flash_size>0x40000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9802</signature>
+        </device>
+        <device name="ATmega2564RFR2">
+            <flash_size>0x40000</flash_size>
+            <eeprom_size>0x2000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1ea803</signature>
+        </device>
+        <device name="ATmega256RFR2">
+            <flash_size>0x40000</flash_size>
+            <eeprom_size>0x2000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1ea802</signature>
+        </device>
+        <device name="ATmega32">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9502</signature>
+        </device>
+        <device name="ATmega324A">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9515</signature>
+        </device>
+        <device name="ATmega324P">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9508</signature>
+        </device>
+        <device name="ATmega324PA">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9511</signature>
+        </device>
+        <device name="ATmega325">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9505</signature>
+        </device>
+        <device name="ATmega3250">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9506</signature>
+        </device>
+        <device name="ATmega3250A">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9506</signature>
+        </device>
+        <device name="ATmega3250P">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e950e</signature>
+        </device>
+        <device name="ATmega3250PA">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e950e</signature>
+        </device>
+        <device name="ATmega325A">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9505</signature>
+        </device>
+        <device name="ATmega325P">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e950d</signature>
+        </device>
+        <device name="ATmega325PA">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e950d</signature>
+        </device>
+        <device name="ATmega328">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9514</signature>
+        </device>
+        <device name="ATmega328P">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e950f</signature>
+        </device>
+        <device name="ATmega329">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9503</signature>
+        </device>
+        <device name="ATmega3290">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9504</signature>
+        </device>
+        <device name="ATmega3290A">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9504</signature>
+        </device>
+        <device name="ATmega3290P">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e950c</signature>
+        </device>
+        <device name="ATmega3290PA">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e950c</signature>
+        </device>
+        <device name="ATmega329A">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9503</signature>
+        </device>
+        <device name="ATmega329P">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e950b</signature>
+        </device>
+        <device name="ATmega329PA">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e950b</signature>
+        </device>
+        <device name="ATmega32A">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9502</signature>
+        </device>
+        <device name="ATmega32C1">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9586</signature>
+        </device>
+        <device name="ATmega32HVB">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9510</signature>
+        </device>
+        <device name="ATmega32HVBrevB">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9510</signature>
+        </device>
+        <device name="ATmega32M1">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9584</signature>
+        </device>
+        <device name="ATmega32U2">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e958a</signature>
+        </device>
+        <device name="ATmega32U4">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9587</signature>
+        </device>
+        <device name="ATmega406">
+            <flash_size>0xa000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9507</signature>
+        </device>
+        <device name="ATmega48">
+            <flash_size>0x1000</flash_size>
+            <eeprom_size>0x0100</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9205</signature>
+        </device>
+        <device name="ATmega48A">
+            <flash_size>0x1000</flash_size>
+            <eeprom_size>0x0100</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9205</signature>
+        </device>
+        <device name="ATmega48P">
+            <flash_size>0x1000</flash_size>
+            <eeprom_size>0x0100</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e920a</signature>
+        </device>
+        <device name="ATmega48PA">
+            <flash_size>0x1000</flash_size>
+            <eeprom_size>0x0100</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e920a</signature>
+        </device>
+        <device name="ATmega48PB">
+            <flash_size>0x1000</flash_size>
+            <eeprom_size>0x0100</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9210</signature>
+        </device>
+        <device name="ATmega64">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9602</signature>
+        </device>
+        <device name="ATmega640">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9608</signature>
+        </device>
+        <device name="ATmega644">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9609</signature>
+        </device>
+        <device name="ATmega644A">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9609</signature>
+        </device>
+        <device name="ATmega644P">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e960a</signature>
+        </device>
+        <device name="ATmega644PA">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e960a</signature>
+        </device>
+        <device name="ATmega644RFR2">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1ea603</signature>
+        </device>
+        <device name="ATmega645">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9605</signature>
+        </device>
+        <device name="ATmega6450">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9606</signature>
+        </device>
+        <device name="ATmega6450A">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9606</signature>
+        </device>
+        <device name="ATmega6450P">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e960e</signature>
+        </device>
+        <device name="ATmega645A">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9605</signature>
+        </device>
+        <device name="ATmega645P">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e960D</signature>
+        </device>
+        <device name="ATmega649">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9603</signature>
+        </device>
+        <device name="ATmega6490">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9604</signature>
+        </device>
+        <device name="ATmega6490A">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9604</signature>
+        </device>
+        <device name="ATmega6490P">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e960C</signature>
+        </device>
+        <device name="ATmega649A">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9603</signature>
+        </device>
+        <device name="ATmega649P">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e960b</signature>
+        </device>
+        <device name="ATmega64A">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9602</signature>
+        </device>
+        <device name="ATmega64C1">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9686</signature>
+        </device>
+        <device name="ATmega64HVE2">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9610</signature>
+        </device>
+        <device name="ATmega64M1">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9684</signature>
+        </device>
+        <device name="ATmega64RFR2">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1ea602</signature>
+        </device>
+        <device name="ATmega8">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9307</signature>
+        </device>
+        <device name="ATmega8515">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9306</signature>
+        </device>
+        <device name="ATmega8535">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9308</signature>
+        </device>
+        <device name="ATmega88">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e930a</signature>
+        </device>
+        <device name="ATmega88A">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e930a</signature>
+        </device>
+        <device name="ATmega88P">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e930f</signature>
+        </device>
+        <device name="ATmega88PA">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e930f</signature>
+        </device>
+        <device name="ATmega88PB">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9316</signature>
+        </device>
+        <device name="ATmega8A">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9307</signature>
+        </device>
+        <device name="ATmega8HVA">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0100</eeprom_size>
+            <fuse_bits>False</fuse_bits>
+            <ext_fuse_bits>False</ext_fuse_bits>
+            <signature>1e9310</signature>
+        </device>
+        <device name="ATmega8U2">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1e9389</signature>
+        </device>
+        <device name="ATxmega128A1">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E974C</signature>
+        </device>
+        <device name="ATxmega128A1U">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E974C</signature>
+        </device>
+        <device name="ATxmega128A3">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9742</signature>
+        </device>
+        <device name="ATxmega128A3U">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9742</signature>
+        </device>
+        <device name="ATxmega128A4U">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9746</signature>
+        </device>
+        <device name="ATxmega128B1">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E974D</signature>
+        </device>
+        <device name="ATxmega128B3">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E974B</signature>
+        </device>
+        <device name="ATxmega128C3">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9752</signature>
+        </device>
+        <device name="ATxmega128D3">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9748</signature>
+        </device>
+        <device name="ATxmega128D4">
+            <flash_size>0x20000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9747</signature>
+        </device>
+        <device name="ATxmega16A4">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9441</signature>
+        </device>
+        <device name="ATxmega16A4U">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9441</signature>
+        </device>
+        <device name="ATxmega16C4">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9443</signature>
+        </device>
+        <device name="ATxmega16D4">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9442</signature>
+        </device>
+        <device name="ATxmega16E5">
+            <flash_size>0x4000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9445</signature>
+        </device>
+        <device name="ATxmega192A3">
+            <flash_size>0x30000</flash_size>
+            <eeprom_size>0x800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9744</signature>
+        </device>
+        <device name="ATxmega192A3U">
+            <flash_size>0x30000</flash_size>
+            <eeprom_size>0x800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9744</signature>
+        </device>
+        <device name="ATxmega192C3">
+            <flash_size>0x30000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9751</signature>
+        </device>
+        <device name="ATxmega192D3">
+            <flash_size>0x30000</flash_size>
+            <eeprom_size>0x800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9749</signature>
+        </device>
+        <device name="ATxmega256A3">
+            <flash_size>0x40000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9842</signature>
+        </device>
+        <device name="ATxmega256A3B">
+            <flash_size>0x40000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9843</signature>
+        </device>
+        <device name="ATxmega256A3BU">
+            <flash_size>0x40000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9843</signature>
+        </device>
+        <device name="ATxmega256A3U">
+            <flash_size>0x40000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9842</signature>
+        </device>
+        <device name="ATxmega256C3">
+            <flash_size>0x40000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9846</signature>
+        </device>
+        <device name="ATxmega256D3">
+            <flash_size>0x40000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9844</signature>
+        </device>
+        <device name="ATxmega32A4">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9541</signature>
+        </device>
+        <device name="ATxmega32A4U">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9541</signature>
+        </device>
+        <device name="ATxmega32C3">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9549</signature>
+        </device>
+        <device name="ATxmega32C4">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9544</signature>
+        </device>
+        <device name="ATxmega32D3">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E954A</signature>
+        </device>
+        <device name="ATxmega32D4">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9542</signature>
+        </device>
+        <device name="ATxmega32E5">
+            <flash_size>0x8000</flash_size>
+            <eeprom_size>0x0400</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E954C</signature>
+        </device>
+        <device name="ATxmega384C3">
+            <flash_size>0x60000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9845</signature>
+        </device>
+        <device name="ATxmega384D3">
+            <flash_size>0x60000</flash_size>
+            <eeprom_size>0x1000</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9847</signature>
+        </device>
+        <device name="ATxmega64A1">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E964E</signature>
+        </device>
+        <device name="ATxmega64A1U">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E964E</signature>
+        </device>
+        <device name="ATxmega64A3">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9642</signature>
+        </device>
+        <device name="ATxmega64A3U">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9642</signature>
+        </device>
+        <device name="ATxmega64A4U">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9646</signature>
+        </device>
+        <device name="ATxmega64B1">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9652</signature>
+        </device>
+        <device name="ATxmega64B3">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9651</signature>
+        </device>
+        <device name="ATxmega64C3">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9649</signature>
+        </device>
+        <device name="ATxmega64D3">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E964A</signature>
+        </device>
+        <device name="ATxmega64D4">
+            <flash_size>0x10000</flash_size>
+            <eeprom_size>0x0800</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9647</signature>
+        </device>
+        <device name="ATxmega8E5">
+            <flash_size>0x2000</flash_size>
+            <eeprom_size>0x0200</eeprom_size>
+            <fuse_bits>True</fuse_bits>
+            <ext_fuse_bits>True</ext_fuse_bits>
+            <signature>1E9341</signature>
+        </device>
+    </devices>
+</xloader>
