@@ -1,6 +1,6 @@
 # xloader
 
-It is a command-line tool using the same syntax as Atmel AVROSP application. Currently, is compatible with the AVR109 bootloader protocol with XBoot extensions (https://github.com/alexforencich/xboot). Unlike AVROSP, it does not require installing AVR Studio.
+It is a command-line tool using the same syntax as Atmel AVROSP application. Currently, it is compatible with the AVR109 bootloader protocol and XBoot bootloader (https://github.com/alexforencich/xboot). Unlike AVROSP, it does not require installing AVR Studio.
 
 ### Installation:
 ```
