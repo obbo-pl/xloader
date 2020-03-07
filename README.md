@@ -57,7 +57,7 @@ Parameters:
 Example:
         ./xloader.py -d ATxmega32E5 -if myapp.hex -vf
 ```
-Example of usage:
+Example of use:
 ```
 pi@raspberrypi:/usr/local/xloader $ ./xloader.py -d atxmega32e5 -s -y --if 'flash.hex' --pf --vf -q
 Using I2C bus '/dev/i2c-1' at address 0x2A
