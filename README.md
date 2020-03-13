@@ -77,3 +77,16 @@ Comparing flash data...
 OK. Flash verified.
 ```
 
+```
+pi@raspberrypi:/usr/local/xloader $ python3
+Python 3.5.3 (default, Sep 27 2018, 17:25:39)
+[GCC 6.3.0 20170516] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import xloader
+>>> loader = xloader.XBoot(xloader.PiBusI2C(1, 0x2A))
+>>> loader.return_software_identifier()
+{'data': 'XBoot++', 'result': True}
+>>> loader.check_block_support()
+{'size': 128, 'result': True, 'code': 'Y'}
+>>>
+```
