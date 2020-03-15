@@ -1,6 +1,6 @@
 # xloader
 
-It is a command-line tool using the same syntax as Atmel AVROSP application. Currently, it is compatible with the AVR109 bootloader protocol and XBoot bootloader (https://github.com/alexforencich/xboot). Unlike AVROSP, it does not require installing AVR Studio.
+It is a command-line tool using the same syntax as Atmel AVROSP application. Currently, it is compatible with the AVR109 bootloader protocol and XBoot bootloader (https://github.com/alexforencich/xboot). Unlike AVROSP, it does not require installing AVR Studio. Currently only includes support for the I2C Raspberry Pi bus.
 
 ### Installation:
 ```
@@ -76,7 +76,7 @@ Comparing flash data...
 100% (32768 of 32768) |############################################| Elapsed Time: 0:00:08 Time:  0:00:08
 OK. Flash verified.
 ```
-
+Instead, you can use the modules contained in the script
 ```
 pi@raspberrypi:/usr/local/xloader $ python3
 Python 3.5.3 (default, Sep 27 2018, 17:25:39)
