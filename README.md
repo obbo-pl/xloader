@@ -4,8 +4,9 @@ It is a command-line tool using the same syntax as Atmel AVROSP application. Cur
 
 ### Installation:
 ```
+sudo apt-get update
 sudo apt-get install python3-pip python3-yaml
-sudo python3 -m pip install smbus intelhex progressbar2
+sudo python3 -m pip install smbus2 intelhex progressbar2
 ```
 Copy and unzip files:
 ```
@@ -57,6 +58,7 @@ Parameters:
 Example:
         ./xloader.py -d ATxmega32E5 -if myapp.hex -vf
 ```
+Edit "xloader.yaml" to set the correct bus name and I2C address of the device.
 Example of use:
 ```
 pi@raspberrypi:/usr/local/xloader $ ./xloader.py -d atxmega32e5 -s -y --if 'flash.hex' --pf --vf -q
