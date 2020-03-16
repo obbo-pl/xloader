@@ -82,7 +82,6 @@ class ProgressBar(object):
         if not(self._silent):
             self._progressbar.finish()
 
-progress = ProgressBar()  
 
 class XLoader(object):
     class Decorators(object):
@@ -102,6 +101,7 @@ class XLoader(object):
             return decorator
 
     def __init__(self):
+        self.progress = ProgressBar()  
         self._IntelHex = None
         try:
             from intelhex import IntelHex
@@ -109,6 +109,7 @@ class XLoader(object):
             message.show('WARNING', '{}: {}'.format(type(e).__name__, str(e)))
         else:
             self._IntelHex = IntelHex
+        self.programmer = None
         self.i2c = {
             'bus': None, 
             'address': None
@@ -260,19 +261,17 @@ class XLoader(object):
             self.usage(self._app_name)
             return
         message.set_silent(self.arg['silent_mode'])
-        progress.set_silent(self.arg['no_progress_indicator'])
-        if (self.i2c['bus'] is None) or (self.i2c['address'] is None):
-            message.show('CRITICAL', 'First configure the I2C bus.') 
-            sys.exit(1)
+        self.progress.set_silent(self.arg['no_progress_indicator'])
         message.show('INFO', 'Using I2C bus \'{}\' at address 0x{}'.format(self.i2c['bus'], \
             self._byte_to_hex_string(self.i2c['address'])))
-        bus = self._initialize_bus(self.i2c)            
-        programmer = self._initialize_programmer(bus)
-        self._enter_programming_mode(programmer) 
-        self._check_auto_increment(programmer)       
-        self._check_bootloader_version(programmer)
-        self._check_block_support(programmer)
-        signature = self._get_signature(programmer)
+        if self.programmer is None:
+            message.show('CRITICAL', 'First configure the programmer.') 
+            sys.exit(1)
+        self._enter_programming_mode(self.programmer) 
+        self._check_auto_increment(self.programmer)       
+        self._check_bootloader_version(self.programmer)
+        self._check_block_support(self.programmer)
+        signature = self._get_signature(self.programmer)
         device = AVRDevice()
         self._get_device_info(device, self._device_definition)
         # Check signature
@@ -282,46 +281,41 @@ class XLoader(object):
                 sys.exit(1)
         # Goto chip programing
         if self.arg['read_lock_bits']:
-            self._read_lock_bits(programmer, device)
+            self._read_lock_bits(self.programmer, device)
         if self.arg['read_fuse_bits']:
-            self._read_fuse_bits(programmer, device)
+            self._read_fuse_bits(self.programmer, device)
         if self.arg['read_flash']:
-            self._read_flash(programmer, device)
+            self._read_flash(self.programmer, device)
         if self.arg['read_eeprom']:
-            self._read_eeprom(programmer, device)          
+            self._read_eeprom(self.programmer, device)          
         if self.arg['chip_erase']:
-            self._chip_erase(programmer, device)
+            self._chip_erase(self.programmer, device)
         if self.arg['program_flash']:
-            self._program_flash(programmer, device)
+            self._program_flash(self.programmer, device)
         if self.arg['program_eeprom']:
-            self._program_eeprom(programmer, device)
+            self._program_eeprom(self.programmer, device)
         if not(self.arg['program_lock_bits'] is None):
             if self.arg['program_lock_bits'] >= 0:
-                self._program_lock_bits(programmer, device)
+                self._program_lock_bits(self.programmer, device)
         if not(self.arg['verify_lock_bits'] is None):
             if self.arg['verify_lock_bits'] >= 0:
-                self._verify_lock_bits(programmer, device)
+                self._verify_lock_bits(self.programmer, device)
         if self.arg['verify_flash']:
-            self._verify_flash(programmer, device)
+            self._verify_flash(self.programmer, device)
         if self.arg['verify_eeprom']:
-            self._verify_eeprom(programmer, device)
+            self._verify_eeprom(self.programmer, device)
         # Finish
-        self._leave_programming_mode(programmer)
-        if programmer != None:
-            programmer.close()
-    
-    @Decorators.exit_on_exception(message)
-    def _initialize_bus(self, i2c):
-        return PiBusI2C(i2c['bus'], i2c['address']) 
-    
-    @Decorators.exit_on_exception(message)
-    def _initialize_programmer(self, bus):
-        return XBoot(bus)
+        self._leave_programming_mode(self.programmer)
+        if self.programmer != None:
+            self.programmer.close()
+        
+    def connect(self, programmer):
+        self.programmer = programmer
   
     @Decorators.exit_on_exception(message)
     def _enter_programming_mode(self, programmer):
-        programming_mode = programmer.enter_programming_mode() 
         # For XBoot bootloader it doesn't matter 
+        programming_mode = programmer.enter_programming_mode() 
         if not(programming_mode['result']):
             message.show('CRITICAL', 'Set programming mode failed.')
             sys.exit(1)
@@ -330,8 +324,8 @@ class XLoader(object):
 
     @Decorators.exit_on_exception(message)
     def _leave_programming_mode(self, programmer):
-        programming_mode = programmer.leave_programming_mode()
         # For XBoot bootloader it doesn't matter 
+        programming_mode = programmer.leave_programming_mode()
         if not(programming_mode['result']):
             message.show('CRITICAL', 'Leaving programming mode failed.')
             
@@ -469,10 +463,10 @@ class XLoader(object):
             return
         message.show('INFO', 'Reading flash contents...')
         ih = self._IntelHex()
-        progress.create(self._flash_size)
+        self.progress.create(self._flash_size)
         if (self._block_support) and (self._block_size > 0x00): 
             while (address <= self._flash_end) and not(errors):
-                progress.update(address)
+                self.progress.update(address)
                 errors, address, size = self._preset_address(address, self._block_size, self._flash_end, prog, 'F')
                 if not(errors):
                     bytes = prog.block_read('F', size)
@@ -484,7 +478,7 @@ class XLoader(object):
                         errors = True
         else:
             while (address <= self._flash_end) and not(errors):
-                progress.update(address)
+                self.progress.update(address)
                 errors, address, size = self._preset_address(address, 2, self._flash_end, prog, 'F')
                 if not(errors):
                     bytes = prog.read_program_memory()
@@ -494,7 +488,7 @@ class XLoader(object):
                         address += 2
                     else:
                         errors = True        
-        progress.finish(errors)
+        self.progress.finish(errors)
         self._check_reply_error(ih)
         if errors:
             message.show('CRITICAL', 'Read errors have occurred at address 0x{}, skipping to write to the Hex output file.'. \
@@ -521,11 +515,11 @@ class XLoader(object):
             if not(response['result']):
                 message.show('INFO', 'Flash address setting failed.')
                 return
-            progress.create(self._flash_size)
+            self.progress.create(self._flash_size)
             message.show('INFO', 'Comparing flash data...')
             if (self._block_support) and (self._block_size > 0x00):
                 while (address <= self._flash_end) and not(errors):
-                    progress.update(address)
+                    self.progress.update(address)
                     errors, address, size = self._preset_address(address, self._block_size, self._flash_end, prog, 'F')
                     if not(errors):
                         bytes = prog.block_read('F', size)
@@ -539,7 +533,7 @@ class XLoader(object):
                             errors = True                   
             else:
                 while (address <= self._flash_end) and not(errors):
-                    progress.update(address)
+                    self.progress.update(address)
                     errors, address, size = self._preset_address(address, 2, self._flash_end, prog, 'F')
                     if not(errors):
                         bytes = prog.read_program_memory()
@@ -553,7 +547,7 @@ class XLoader(object):
                             address += 2
                         else:
                             errors = True
-            progress.finish(errors)
+            self.progress.finish(errors)
             if errors:
                 message.show('CRITICAL', 'Read errors occurred at address 0x{}, verification skipped.'.format( \
                     self._byte_to_hex_string(address, 3)))
@@ -581,11 +575,11 @@ class XLoader(object):
             if not(response['result']):
                 message.show('INFO', 'Flash address setting failed.')
                 return
-            progress.create(self._flash_size)
+            self.progress.create(self._flash_size)
             message.show('INFO', 'Programming flash contents...')
             if (self._block_support) and (self._block_size > 0x00):
                 while (address <= self._flash_end) and not(errors):
-                    progress.update(address)
+                    self.progress.update(address)
                     errors, address, size = self._preset_address(address, self._block_size, self._flash_end, prog, 'F')
                     if not(errors):
                         to_write = []
@@ -598,7 +592,7 @@ class XLoader(object):
                             errors = True     
             else:
                 while (address <= self._flash_end) and not(errors):
-                    progress.update(address)
+                    self.progress.update(address)
                     errors, address, size = self._preset_address(address, 2, self._flash_end, prog, 'F')
                     if not(errors):
                         bytes = prog.write_program_memory_low_byte(ih[address])
@@ -614,7 +608,7 @@ class XLoader(object):
                                 errors = True
                         else:
                             errors = True
-            progress.finish(errors)
+            self.progress.finish(errors)
             if errors:
                 message.show('CRITICAL', 'Write errors occurred at address 0x{}.'.format(self._byte_to_hex_string(address, 3))) 
             else:
@@ -633,10 +627,10 @@ class XLoader(object):
             return
         message.show('INFO', 'Reading EEPROM contents...')
         ih = self._IntelHex()
-        progress.create(self._eeprom_size)
+        self.progress.create(self._eeprom_size)
         if (self._block_support) and (self._block_size > 0x00):
             while (address <= self._eeprom_end) and not(errors):
-                progress.update(address)
+                self.progress.update(address)
                 errors, address, size = self._preset_address(address, self._block_size, self._eeprom_end, prog, 'E')
                 if not(errors):
                     bytes = prog.block_read('E', size)
@@ -648,7 +642,7 @@ class XLoader(object):
                         errors = True
         else:
             while (address <= self._eeprom_end) and not(errors):
-                progress.update(address)
+                self.progress.update(address)
                 errors, address, size = self._preset_address(address, 1, self._eeprom_end, prog, 'E')
                 if not(errors):
                     bytes = prog.read_data_memory()
@@ -657,7 +651,7 @@ class XLoader(object):
                         address += 1
                     else:
                         errors = True
-        progress.finish(errors)
+        self.progress.finish(errors)
         self._check_reply_error(ih)
         if errors:
             message.show('CRITICAL', 'Read errors have occurred at address 0x{}, skipping to write to the Hex output file.'. \
@@ -684,11 +678,11 @@ class XLoader(object):
             if not(response['result']):
                 message.show('INFO', 'EEPROM address setting failed.')
                 return
-            progress.create(self._eeprom_size)
+            self.progress.create(self._eeprom_size)
             message.show('INFO', 'Comparing EEPROM data...')
             if (self._block_support) and (self._block_size > 0x00):
                 while (address <= self._eeprom_end) and not(errors):
-                    progress.update(address)
+                    self.progress.update(address)
                     errors, address, size = self._preset_address(address, self._block_size, self._eeprom_end, prog, 'E')
                     if not(errors):
                         bytes = prog.block_read('E', size)
@@ -702,7 +696,7 @@ class XLoader(object):
                             errors = True
             else:
                 while (address <= self._eeprom_end) and not(errors):
-                    progress.update(address)
+                    self.progress.update(address)
                     errors, address, size = self._preset_address(address, 1, self._eeprom_end, prog, 'E')
                     if not(errors):
                         bytes = prog.read_data_memory()
@@ -713,7 +707,7 @@ class XLoader(object):
                             address += 1
                         else:
                             errors = True
-            progress.finish(errors)
+            self.progress.finish(errors)
             if errors:
                 message.show('CRITICAL', 'Read errors occurred at address 0x{}, verification skipped.'.format( \
                     self._byte_to_hex_string(address, 3)))
@@ -741,11 +735,11 @@ class XLoader(object):
             if not(response['result']):
                 message.show('INFO', 'EEPROM address setting failed.')
                 return
-            progress.create(self._eeprom_size)
+            self.progress.create(self._eeprom_size)
             message.show('INFO', 'Programming EEPROM contents...')
             if (self._block_support) and (self._block_size > 0x00):
                 while (address <= self._eeprom_end) and not(errors):
-                    progress.update(address)
+                    self.progress.update(address)
                     errors, address, size = self._preset_address(address, self._block_size, self._eeprom_end, prog, 'E')
                     if not(errors):
                         to_write = []
@@ -758,7 +752,7 @@ class XLoader(object):
                             errors = True
             else:
                 while (address <= self._eeprom_end) and not(errors):
-                    progress.update(address)
+                    self.progress.update(address)
                     errors, address, size = self._preset_address(address, 1, self._eeprom_end, prog, 'E')
                     if not(errors):
                         bytes = prog.write_data_memory(ih[address])
@@ -766,7 +760,7 @@ class XLoader(object):
                             address += 1
                         else:
                             errors = True
-            progress.finish(errors)
+            self.progress.finish(errors)
             if errors:
                 message.show('CRITICAL', 'Write errors occurred at address 0x{}.'.format(self._byte_to_hex_string(address, 3)))                
             else:
@@ -1657,6 +1651,8 @@ class PiBusI2C(object):
         :param address: 7 bit device address.
         :type address: int
         """ 
+        if (bus is None) or (address is None):
+            raise ValueError('I2C \'bus\' or \'address\' has no value.') 
         import smbus2     
         self._smbus = smbus2.SMBus(bus)
         self._msg = smbus2.i2c_msg
@@ -1729,6 +1725,11 @@ if __name__ == '__main__':
     except Exception as e:
         message.show('WARNING', '{}: {}'.format(type(e).__name__, str(e)))
     message.set_level(programmer.log['level'])
+    try:
+        programmer.connect(XBoot(PiBusI2C(programmer.i2c['bus'], programmer.i2c['address'])))
+    except Exception as e:
+        message.show('WARNING', '{}: {}'.format(type(e).__name__, str(e)))
+        sys.exit(1)
     programmer.parse_command(sys.argv)
     programmer.exec_command()
     sys.exit(0)
