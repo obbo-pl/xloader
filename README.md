@@ -59,6 +59,7 @@ Example:
         ./xloader.py -d ATxmega32E5 -if myapp.hex -vf
 ```
 Edit "xloader.yaml" to set the correct bus name and I2C address of the device.
+
 Example of use:
 ```
 pi@raspberrypi:/usr/local/xloader $ ./xloader.py -d atxmega32e5 -s -y --if 'flash.hex' --pf --vf -q
